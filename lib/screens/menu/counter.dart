@@ -37,11 +37,11 @@ class Counter extends StatefulWidget {
 class _CounterState extends State<Counter> with SingleTickerProviderStateMixin {
   late AnimationController animController;
 
-  _CounterState() {
-    animController = AnimationController(
-      duration: Duration(milliseconds: 500),
-      vsync: this,
-    );
+  @override
+  void initState() {
+    super.initState();
+    animController =
+        AnimationController(duration: Duration(milliseconds: 500), vsync: this);
   }
 
   @override
@@ -97,56 +97,53 @@ class _CounterState extends State<Counter> with SingleTickerProviderStateMixin {
               child: Card(
                 margin: const EdgeInsets.only(left: height - 20.0),
                 color: colorTween.animate(animController).value,
-                child: GestureDetector(
-                  behavior: HitTestBehavior.translucent,
-                  onTap: () => value = add(animController, value),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 4.0),
-                    child: Row(
-                      children: [
-                        const Spacer(),
-                        Expanded(
-                          flex: 7,
-                          child: ListTile(
-                            minVerticalPadding: 2.0,
-                            horizontalTitleGap: 2.0,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                            title: Text(
-                              widget.title,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                            ),
-                            subtitle: Text(widget.subtitle),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 2.0, vertical: 4.0),
+                  child: Row(
+                    children: [
+                      const Spacer(),
+                      Expanded(
+                        flex: 7,
+                        child: ListTile(
+                          minVerticalPadding: 2.0,
+                          horizontalTitleGap: 2.0,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                          title: Text(
+                            widget.title,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
                           ),
+                          subtitle: Text(widget.subtitle),
                         ),
-                        Expanded(
-                          child: FloatingActionButton(
-                            // decrease
-                            heroTag: null,
-                            onPressed: () => value = sub(animController, value),
-                            child: Icon(Icons.remove),
-                          ),
+                      ),
+                      Expanded(
+                        child: FloatingActionButton(
+                          // decrease
+                          heroTag: null,
+                          onPressed: () => value = sub(animController, value),
+                          child: Icon(Icons.remove),
                         ),
-                        Expanded(
-                          flex: 2,
-                          child: TextField(
-                            controller: widget.textEditingController,
-                            enabled: false,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headline5,
-                          ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: TextField(
+                          controller: widget.textEditingController,
+                          enabled: false,
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headline5,
                         ),
-                        Expanded(
-                          child: FloatingActionButton(
-                            // increase
-                            heroTag: null,
-                            onPressed: () => value = add(animController, value),
-                            child: Icon(Icons.add),
-                          ),
+                      ),
+                      Expanded(
+                        child: FloatingActionButton(
+                          // increase
+                          heroTag: null,
+                          onPressed: () => value = add(animController, value),
+                          child: Icon(Icons.add),
                         ),
-                        const SizedBox(width: 2.0),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(width: 2.0),
+                    ],
                   ),
                 ),
               ),
