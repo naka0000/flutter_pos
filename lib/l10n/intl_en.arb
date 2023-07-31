@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "main_title": "POS app",
   "generic_deleteQuestion": "Delete?",
   "generic_yes": "Yes",

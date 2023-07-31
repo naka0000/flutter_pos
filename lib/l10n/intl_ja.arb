@@ -1,0 +1,46 @@
+{
+  "@@locale": "ja",
+  "main_title": "スマートポス",
+  "generic_deleteQuestion": "削除しますか?",
+  "generic_yes": "はい",
+  "generic_no": "いいえ",
+  "generic_confirm": "確定する",
+  "generic_cancel": "キャンセル",
+  "lobby": "ロビー",
+  "lobby_drawerHeader": "ポス",
+  "lobby_report": "レシート",
+  "lobby_journal": "日集計表",
+  "lobby_menuEdit": "メニューを編集する",
+  "lobby_tooltip": "長押しでテーブル追加",
+  "details_discount": "割引",
+  "details_discountTxt": "直値引き: {total}, 割引率: {discountPct}%",
+  "@details_discountTxt": {
+    "placeholders": {
+      "total": {
+        "type": "String",
+        "format": "currency",
+        "description": "割引前の料金"
+      },
+      "discountPct": {
+        "type": "String",
+        "format": "decimalPercentPattern"
+      }
+    }
+  },
+  "details_liDeleted": "(削除済み)",
+  "details_customerPay": "お客様の支払い",
+  "details_notEnough": "情報が不十分です",
+  "menu_confirm": "注文を確定する",
+  "menu_revert": "もとに戻す",
+  "edit_menu_filterHint": "商品名で検索",
+  "edit_menu_formLabel": "料理",
+  "edit_menu_formPrice": "金額",
+  "history_toggleDiscount": "割引率を適用する",
+  "history_delPopUpTitle": "注文を破棄しますか?",
+  "history_rangePickerHelpTxt": "範囲選択",
+  "journal_entry": "記入",
+  "journal_entryHint": "記入する",
+  "journal_entryReqTxt": "詳細の記入は必須です",
+  "journal_amt": "数量",
+  "journal_datetime": "時間"
+}
