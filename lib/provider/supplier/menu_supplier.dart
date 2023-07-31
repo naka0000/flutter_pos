@@ -28,7 +28,11 @@ class MenuSupplier {
   }
 
   int nextID() {
-    return _m.map<int>((d) => d.id).reduce(max) + 1;
+    if(_m.isEmpty) {
+      return 1;
+    } else {
+      return _m.map<int>((d) => d.id).reduce(max) + 1;
+    }
   }
 
   Future<void>? addDish(Dish newDish) {
@@ -59,47 +63,47 @@ class MenuSupplier {
 
 Menu _defaultMenu() {
   return Menu([
-    Dish.fromAsset(
-      0,
-      'Rice Noodles',
-      10000,
-      'assets/rice_noodles.png',
-    ),
-    Dish.fromAsset(
-      1,
-      'Lime Juice',
-      20000,
-      'assets/lime_juice.png',
-    ),
-    Dish.fromAsset(
-      2,
-      'Vegan Noodle',
-      30000,
-      'assets/vegan_noodles.png',
-    ),
-    Dish.fromAsset(
-      3,
-      'Oatmeal with Berries and Coconut',
-      40000,
-      'assets/oatmeal_with_berries_and_coconut.png',
-    ),
-    Dish.fromAsset(
-      4,
-      'Fried Chicken with Egg',
-      50000,
-      'assets/fried_chicken-with_with_wit_egg.png',
-    ),
-    Dish.fromAsset(
-      5,
-      'Kimchi',
-      60000,
-      'assets/kimchi.png',
-    ),
-    Dish.fromAsset(
-      6,
-      'Coffee',
-      70000,
-      'assets/coffee.png',
-    ),
+    // Dish.fromAsset(
+    //   0,
+    //   'Rice Noodles',
+    //   10000,
+    //   'assets/rice_noodles.png',
+    // ),
+    // Dish.fromAsset(
+    //   1,
+    //   'Lime Juice',
+    //   20000,
+    //   'assets/lime_juice.png',
+    // ),
+    // Dish.fromAsset(
+    //   2,
+    //   'Vegan Noodle',
+    //   30000,
+    //   'assets/vegan_noodles.png',
+    // ),
+    // Dish.fromAsset(
+    //   3,
+    //   'Oatmeal with Berries and Coconut',
+    //   40000,
+    //   'assets/oatmeal_with_berries_and_coconut.png',
+    // ),
+    // Dish.fromAsset(
+    //   4,
+    //   'Fried Chicken with Egg',
+    //   50000,
+    //   'assets/fried_chicken-with_with_wit_egg.png',
+    // ),
+    // Dish.fromAsset(
+    //   5,
+    //   'Kimchi',
+    //   60000,
+    //   'assets/kimchi.png',
+    // ),
+    // Dish.fromAsset(
+    //   6,
+    //   'Coffee',
+    //   70000,
+    //   'assets/coffee.png',
+    // ),
   ]);
 }
