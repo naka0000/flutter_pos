@@ -71,7 +71,9 @@ class PosApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('jp'),
       initialRoute: '/',
+      title: 'シンプルレジ',
       builder: (_, screen) => FutureBuilder<dynamic>(
         future: _init,
         builder: (_, dbSnapshot) {

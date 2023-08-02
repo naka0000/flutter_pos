@@ -31,7 +31,7 @@
   "details_customerPay": "お客様の支払い",
   "details_notEnough": "情報が不十分です",
   "menu_confirm": "注文を確定する",
-  "menu_revert": "もとに戻す",
+  "menu_undo": "もとに戻す",
   "edit_menu_filterHint": "商品名で検索",
   "edit_menu_formLabel": "料理",
   "edit_menu_formPrice": "金額",

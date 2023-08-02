@@ -23,18 +23,18 @@ class _SideDrawState extends State<SideDraw> {
   bool? isSelected = true;
   // int? selectedTile;
   final drawData = {
-    'Dashboard': Icons.dashboard,
-    'Food&Drinks': Icons.fastfood,
-    'Bills': Icons.calculate_rounded,
-    'Settings': Icons.app_settings_alt_sharp,
-    'Supportw': Icons.support_agent_rounded,
-    'Expensejournal': Icons.library_books,
-    'Support': Icons.support_agent_rounded,
+    'トップ': Icons.dashboard,
+    'メニュー': Icons.fastfood,
+    '伝票': Icons.calculate_rounded,
+    '設定': Icons.app_settings_alt_sharp,
+    'サポート': Icons.support_agent_rounded,
+    '経費日報': Icons.library_books,
+    'ヘルプ': Icons.support_agent_rounded,
   };
 
   final otherData = {
-    'Expensejournal': Icons.library_books,
-    'Support': Icons.support_agent_rounded,
+    '経費日報': Icons.library_books,
+    'ヘルプ': Icons.support_agent_rounded,
   };
 
   // bool isOthSelected = false;
@@ -63,14 +63,14 @@ class _SideDrawState extends State<SideDraw> {
                   width: 10,
                 ),
                 Text(
-                  'Smart',
+                  'シンプル',
                   style: GoogleFonts.alef(
                     fontWeight: FontWeight.w900,
                     fontSize: 25,
                   ),
                 ),
                 Text(
-                  'POS',
+                  'レジ',
                   style: GoogleFonts.alef(
                     fontWeight: FontWeight.w900,
                     fontSize: 25,
@@ -93,7 +93,7 @@ class _SideDrawState extends State<SideDraw> {
                   child: i == 4
                       ? Padding(
                           padding: const EdgeInsets.only(left: 18.0),
-                          child: Text('Other',
+                          child: Text('その他',
                               style: GoogleFonts.alef(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w600,
